@@ -9,9 +9,10 @@ Inspiration:
 - Kim Svendson https://www.facebook.com/groups/217132562182318/permalink/1426676614561234/
 
 
-concept high level
-i share my unRAID server smb-service through tailscale/tailnet.
-on unRAID server different shares for different users. for each user create shared and private shares. private shares have files that shall not be open by server-owner
+concept high level:
+
+I share my unRAID server smb-service through tailscale/tailnet.
+On unRAID server different shares for different users. for each user create shared and private shares. private shares have files that shall not be open by server-owner
 
 
 Concept Detailed:
