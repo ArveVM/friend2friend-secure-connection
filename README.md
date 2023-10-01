@@ -37,8 +37,8 @@ Concept is:
 
 '''
 
-// ACL to enable acces in Tailnet; full access for admin, and limited for ExternalBackup_users (extbck_users)
-{
+	// ACL to enable acces in Tailnet; full access for admin, and limited for ExternalBackup_users (extbck_users)
+	{
 	// Declare static groups of users. Use autogroups for all users or users with a specific role.
 	"groups": {
 		"group:xtbck_users": [
