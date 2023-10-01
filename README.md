@@ -30,7 +30,9 @@ Concept is:
 
 ## 2. Setup unraid user/shares
 1. Log into unraid
-2. Create new Share
+2. Create new User
+3. Create new share, grant user r/w access to Share
+4. inform user of share-name/pwd
 
 
 
@@ -42,8 +44,8 @@ Concept is:
 	// Declare static groups of users. Use autogroups for all users or users with a specific role.
 	"groups": {
 		"group:xtbck_users": [
-			"arvevm@gmail.com",
-			"kemon89@gmail.com",
+			"admin@gmail.com",
+			"exbck_xx1@gmail.com",
 		],
 	},
 
