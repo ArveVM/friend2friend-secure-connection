@@ -15,7 +15,7 @@ Concept is:
   - Tailnet will then create a secure connection between my server and my friends device which is connected to my tailnet with his tailnet-user
 - On my server (in tailnet) I will then see my friend tailnet-id (email) to which I can set security measures in my tailnet (ACL)
 
-<img width="11500" alt="image" src="https://github.com/ArveVM/friend2friend-secure-connection/assets/96014323/c392a025-d6b3-42cd-9c76-fc6572e1fea5">
+<img width="1145" alt="image" src="https://github.com/ArveVM/friend2friend-secure-connection/assets/96014323/49533511-ddff-42e8-8d09-0ce0d545e911">
 
 
 ## 1. Setup Tailnet
