@@ -1,17 +1,23 @@
 # friend2friend-secure-connection
 Options to securely connect to friends network for offsite backup
 
+rather than traditional VPN, use Tailscale/tailnet to grant access to individual server ip/port 
+
 Inspiration:
 - HA Norge Q&A sessions for knowledge sharing and concept evaluation
 - KennethM for techincal know-how on setup,, early testing to get solution actually working :)
 - Kim Svendson https://www.facebook.com/groups/217132562182318/permalink/1426676614561234/
 
 
+concept high level
+i share my unRAID server smb-service through tailscale/tailnet.
+on unRAID server different shares for different users. for each user create shared and private shares. private shares have files that shall not be open by server-owner
 
 
-Concept is:
-- for me to have a server that is 24/7 on,, with permanent internet connection.
+Concept Detailed:
+- for me to have a server that is 24/7 on,, with permanent internet connection and parity protection from drive-failure 
 - on that server I create a share and userID/pwd for my friend(s) to upload their "offsite-backups"
+- all shares must be drive-fail-protected, mirror, raid or parity. this way data is some kind of protection against drive-failure 
 - then I create a secure Tailnet in which I share my server (IP and relevant ports) to my friens(s) which will create tailnet-users for them
   - Tailnet will then create a secure connection between my server and my friends device which is connected to my tailnet with his tailnet-user
 - On my server (in tailnet) I will then see my friend tailnet-id (email) to which I can set security measures in my tailnet (ACL)
@@ -99,3 +105,11 @@ Concept is:
 }
 
 '''
+
+
+todo:
+- script samples for rsync encrypted tar-files,,, or other way of packeting stuff in its simplest way
+- guide on setup Duplicacy
+- guide on test connection/speed
+
+
