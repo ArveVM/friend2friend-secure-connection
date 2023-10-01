@@ -9,13 +9,13 @@ Inspiration:
 - Kim Svendson https://www.facebook.com/groups/217132562182318/permalink/1426676614561234/
 
 
-concept high level:
+## concept high level:
 
 I share my unRAID server smb-service through tailscale/tailnet.
 On unRAID server different shares for different users. for each user create shared and private shares. private shares have files that shall not be open by server-owner
 
 
-Concept Detailed:
+## Concept Detailed:
 - for me to have a server that is 24/7 on,, with permanent internet connection and parity protection from drive-failure 
 - on that server I create a share and userID/pwd for my friend(s) to upload their "offsite-backups"
 - all shares must be drive-fail-protected, mirror, raid or parity. this way data is some kind of protection against drive-failure 
@@ -26,7 +26,7 @@ Concept Detailed:
 <img width="1145" alt="image" src="https://github.com/ArveVM/friend2friend-secure-connection/assets/96014323/49533511-ddff-42e8-8d09-0ce0d545e911">
 
 
-## 1. Setup Tailnet
+## 1. Setup Tailnet and Tailnet-admin
 1. go to https://tailscale.com/
 2. create free personal account (using one of their accepted logon-providers (google, github etc)
 3. this account will be the tailnet-admin
@@ -34,17 +34,26 @@ Concept Detailed:
 ## 2. Setup/share unraid Server in Tailnet
 1. Log into unraid
 2. install Tailscale-plugin
-3. in tailscale-plugin, log into Tailnet with tailnet-admin-account
+3. in tailscale-plugin, log into Tailnet with tailnet-admin-account 
 4. make sure NetBIOS=OFF in smb-settings
 5. setup proper ACL, limit to port 445 if no other services than smb-file-transfer is required
-6. share server with friend,, click Share from Machines-tab (on server which you want to share in Tailscale Admin-console and copy link 
+6. share server with friend,, click Share from Machines-tab (on server which you want to share in Tailscale Admin-console and copy link
+7. make note of tailnet-ip of server,, friend need this to add connection
 
-## 2. Setup unraid user/shares
+## 3. Setup unraid user/shares
 1. Log into unraid
 2. Create new User
 3. Create new share, grant user r/w access to Share
 4. inform user of share-name/pwd
 
+## 4. Setup tailnet-user - logon
+1. accept invite in link from 2.6 - create your tailnet-user 
+2. connect/install tailscale on your device (Server or pc/tablet) with tailnet-user - connecting to tailnet
+3. create connection to remote share on servers tailnet-ip defined in 2.7
+
+## 5. Setup sync/backup-job - script
+1. use encryption on creation,, so that files moved to friends server is always encrypted 
+4. 
 
 
 
