@@ -2,7 +2,8 @@
 Options to securely connect to friends network for offsite backup
 
 Inspiration:
-- KennethM for techincal know-how on setup,, he is the brains behind this actually working :)
+- HA Norge Q&A sessions for knowledge sharing and concept evaluation
+- KennethM for techincal know-how on setup,, early testing to get solution actually working :)
 - Kim Svendson https://www.facebook.com/groups/217132562182318/permalink/1426676614561234/
 
 
