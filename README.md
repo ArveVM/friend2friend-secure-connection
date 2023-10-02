@@ -26,6 +26,7 @@ Sharing is one way setup! I "own" tailnet and control of my server. If others wa
 <img width="1145" alt="image" src="https://github.com/ArveVM/friend2friend-secure-connection/assets/96014323/49533511-ddff-42e8-8d09-0ce0d545e911">
 
 
+# Server-owner setup:
 ## 1. Setup Tailnet and Tailnet-admin
 1. Go to https://tailscale.com/
 2. Create free personal account (using one of their accepted logon-providers (google, github etc)
@@ -44,16 +45,17 @@ Sharing is one way setup! I "own" tailnet and control of my server. If others wa
 1. Log into unraid
 2. Create new User
 3. Create new share, grant user r/w access to Share
-4. inform user of share-name/pwd
+4. Inform user of Unraid-share-name/pwd
 
+# User-setup:
 ## 4. Setup tailnet-user - logon
-1. accept invite in link from 2.6 - create your tailnet-user 
-2. connect/install tailscale on your device (Server or pc/tablet) with tailnet-user - connecting to tailnet
-3. create connection to remote share on servers tailnet-ip defined in 2.7
+1. Accept invite in link from 2.6 - create your tailnet-user 
+2. Connect/install tailscale on your device (Server or pc/tablet) with tailnet-user - connecting to tailnet
+3. Create connection to remote share on servers tailnet-ip defined in 2.7
 
 ## 5. Setup sync/backup-job - script
-1. use encryption on creation,, so that files moved to friends server is always encrypted 
-4. 
+1. Use encryption on creation,, so that files moved to friends server is always encrypted 
+2. looking into how to secure rsync job ,,,
 
 
 
@@ -121,6 +123,10 @@ todo:
 - script samples for rsync encrypted tar-files,,, or other way of packeting stuff in its simplest way
 - guide on setup Duplicacy
 - guide on test connection/speed
+
+
+issues:
+- what about ssh port-tunnelering?  Must have hjuge level of trust from people you grant access to to ensure no mis-use of this "option"
 
 
 
