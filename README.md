@@ -10,16 +10,16 @@ Inspiration:
 
 
 ## concept high level:
-
-I share my unRAID server smb-service through tailscale/tailnet.
-On unRAID server different shares for different users. for each user create shared and private shares. private shares have files that shall not be open by server-owner
+I share my unRAID server smb-service through my own secured tailscale/tailnet.
+On unRAID server different shares for different users. For each user create private share for them. Shares have files that shall not be open by server-owner, but nevertheless all files should be encrypted
+Sharing is one way setup! I "own" tailnet and control of my server. If others want to share with me - they have to create their own tailnet and share with me.
 
 
 ## Concept Detailed:
-- for me to have a server that is 24/7 on,, with permanent internet connection and parity protection from drive-failure 
-- on that server I create a share and userID/pwd for my friend(s) to upload their "offsite-backups"
-- all shares must be drive-fail-protected, mirror, raid or parity. this way data is some kind of protection against drive-failure 
-- then I create a secure Tailnet in which I share my server (IP and relevant ports) to my friens(s) which will create tailnet-users for them
+- I have a server that is 24/7 on,, with permanent internet connection and parity protection from drive-failure.
+- On that server I create a share and userID/pwd for my friend(s) to upload their "offsite-backups"
+- All shares must be drive-fail-protected, mirror, raid or parity. this way data is some kind of protection against drive-failure 
+- Then I create a secure Tailnet in which I share my server (IP and relevant ports) to my friens(s) which will create tailnet-users for them
   - Tailnet will then create a secure connection between my server and my friends device which is connected to my tailnet with his tailnet-user
 - On my server (in tailnet) I will then see my friend tailnet-id (email) to which I can set security measures in my tailnet (ACL)
 
@@ -27,18 +27,18 @@ On unRAID server different shares for different users. for each user create shar
 
 
 ## 1. Setup Tailnet and Tailnet-admin
-1. go to https://tailscale.com/
-2. create free personal account (using one of their accepted logon-providers (google, github etc)
-3. this account will be the tailnet-admin
+1. Go to https://tailscale.com/
+2. Create free personal account (using one of their accepted logon-providers (google, github etc)
+3. This account will be the tailnet-admin, which you will use to add server and invite user to share, and to create Access Control List
 
 ## 2. Setup/share unraid Server in Tailnet
-1. Log into unraid
-2. install Tailscale-plugin
-3. in tailscale-plugin, log into Tailnet with tailnet-admin-account 
-4. make sure NetBIOS=OFF in smb-settings
-5. setup proper ACL, limit to port 445 if no other services than smb-file-transfer is required
-6. share server with friend,, click Share from Machines-tab (on server which you want to share in Tailscale Admin-console and copy link
-7. make note of tailnet-ip of server,, friend need this to add connection
+1. Log into unraid as admin
+2. Install Tailscale-plugin
+3. In tailscale-plugin, log into Tailnet with tailnet-admin-account 
+4. Make sure NetBIOS=OFF in SMB-settings
+5. Setup proper ACL, limit to port 445 if no other services than smb-file-transfer is required
+6. Share server with friend,, click Share from Machines-tab (on server which you want to share in Tailscale Admin-console and copy link
+7. Make note of tailnet-ip of server,, friend need this to add connection
 
 ## 3. Setup unraid user/shares
 1. Log into unraid
