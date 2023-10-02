@@ -123,3 +123,16 @@ todo:
 - guide on test connection/speed
 
 
+
+# ArveVM-offering:
+dd:
+- All Storage on unraid-server. Separate unraid username/pwd pr share
+- All connection through Tailscale/Tailnet
+  - Shares only available through ArveVM's tailnet (where I am the admin and see who have access,, and I can revoke access)
+ 
+
+Services:
+- Storage opt1: Storage Cashe->Array,, you will load data onto single m2-ssd, where it will be moved to parity-protected array ecah day at 00:05
+  - limit transfers to ?? gb pr day?
+- Storage opt2: Storage directly to Array,, will se slower load as data must be written directly to one spinning drive
+- Speedtest: LibreSpeed docker available on port:82 - to verify speed of connection through 
